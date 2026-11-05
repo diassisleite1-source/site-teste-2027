@@ -1,7 +1,7 @@
 
-/* =====================================
-   ASSIS LEITE - PORTFOLIO
-   ===================================== */
+/* =========================================
+   ASSIS LEITE - PORTFOLIO PROFISSIONAL
+   ========================================= */
 
 :root {
     --bg: #080d18;
@@ -11,7 +11,7 @@
     --muted: #94a3b8;
     --primary: #3b82f6;
     --border: rgba(148, 163, 184, 0.15);
-    --header: rgba(8, 13, 24, 0.92);
+    --header: rgba(8, 13, 24, 0.94);
     --shadow: rgba(0, 0, 0, 0.2);
 }
 
@@ -23,9 +23,11 @@
     --muted: #64748b;
     --primary: #2563eb;
     --border: rgba(15, 23, 42, 0.12);
-    --header: rgba(248, 250, 252, 0.94);
+    --header: rgba(248, 250, 252, 0.95);
     --shadow: rgba(15, 23, 42, 0.08);
 }
+
+/* RESET */
 
 * {
     margin: 0;
@@ -42,9 +44,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--bg);
     color: var(--text);
-    transition: background .3s, color .3s;
-    overflow-x: hidden;
     min-height: 100vh;
+    overflow-x: hidden;
+    transition: background .3s, color .3s;
 }
 
 a {
@@ -65,15 +67,12 @@ button {
     color: var(--primary);
 }
 
-
-/* =====================================
-   CABEÇALHO
-   ===================================== */
+/* CABEÇALHO */
 
 .header {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     background: var(--header);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border);
@@ -103,7 +102,6 @@ button {
     display: grid;
     place-items: center;
     border-radius: 10px;
-    font-size: 14px;
 }
 
 .nav-links {
@@ -157,10 +155,7 @@ button {
     display: none;
 }
 
-
-/* =====================================
-   BOTÕES
-   ===================================== */
+/* BOTÕES */
 
 .btn {
     padding: 14px 22px;
@@ -169,6 +164,7 @@ button {
     font-weight: 600;
     transition: .3s;
     display: inline-block;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -183,6 +179,7 @@ button {
 
 .btn-outline {
     border: 1px solid var(--border);
+    color: var(--text);
 }
 
 .btn-outline:hover {
@@ -190,10 +187,7 @@ button {
     color: var(--primary);
 }
 
-
-/* =====================================
-   PÁGINA INICIAL
-   ===================================== */
+/* PÁGINA INICIAL */
 
 .hero {
     min-height: 620px;
@@ -260,10 +254,7 @@ button {
     color: var(--primary);
 }
 
-
-/* =====================================
-   FOTOGRAFIA
-   ===================================== */
+/* FOTO DE PERFIL */
 
 .hero-image {
     position: relative;
@@ -299,10 +290,6 @@ button {
     color: var(--primary);
 }
 
-.profile-card.no-photo .profile-placeholder {
-    display: grid;
-}
-
 .image-glow {
     position: absolute;
     width: 280px;
@@ -325,10 +312,7 @@ button {
     box-shadow: 0 10px 30px var(--shadow);
 }
 
-
-/* =====================================
-   SEÇÕES
-   ===================================== */
+/* SEÇÕES */
 
 .section {
     padding-top: 80px;
@@ -372,10 +356,7 @@ button {
     letter-spacing: -2px;
 }
 
-
-/* =====================================
-   CARTÕES
-   ===================================== */
+/* CARTÕES */
 
 .cards-grid {
     display: grid;
@@ -426,10 +407,7 @@ button {
     margin-top: 20px;
 }
 
-
-/* =====================================
-   SOBRE
-   ===================================== */
+/* SOBRE */
 
 .about-layout {
     display: grid;
@@ -476,10 +454,7 @@ button {
     margin-bottom: 18px;
 }
 
-
-/* =====================================
-   HABILIDADES
-   ===================================== */
+/* HABILIDADES */
 
 .skills-grid {
     display: grid;
@@ -524,10 +499,7 @@ button {
     border-radius: 20px;
 }
 
-
-/* =====================================
-   PROJETOS
-   ===================================== */
+/* PROJETOS */
 
 .projects-grid {
     display: grid;
@@ -601,10 +573,7 @@ button {
     font-weight: 600;
 }
 
-
-/* =====================================
-   CONTATO
-   ===================================== */
+/* CONTATO */
 
 .contact-grid {
     display: grid;
@@ -625,10 +594,7 @@ button {
     margin: 15px 0 25px;
 }
 
-
-/* =====================================
-   RODAPÉ
-   ===================================== */
+/* RODAPÉ */
 
 .footer {
     border-top: 1px solid var(--border);
@@ -648,10 +614,7 @@ button {
     color: var(--primary);
 }
 
-
-/* =====================================
-   ANIMAÇÕES
-   ===================================== */
+/* ANIMAÇÕES */
 
 .reveal {
     opacity: 0;
@@ -664,13 +627,9 @@ button {
     transform: translateY(0);
 }
 
-
-/* =====================================
-   RESPONSIVIDADE
-   ===================================== */
+/* TABLETS */
 
 @media (max-width: 950px) {
-
     .nav-links {
         gap: 12px;
     }
@@ -687,8 +646,9 @@ button {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
+
+/* CELULARES */
 
 @media (max-width: 750px) {
 
@@ -762,8 +722,9 @@ button {
     .about-text {
         text-align: center;
     }
-
 }
+
+/* CELULARES PEQUENOS */
 
 @media (max-width: 500px) {
 
@@ -800,11 +761,9 @@ button {
     .contact-box {
         padding: 40px 15px;
     }
-
 }
 
-
-/* RESPEITAR PREFERÊNCIAS DE MOVIMENTO */
+/* ACESSIBILIDADE */
 
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -815,4 +774,3 @@ button {
         animation-duration: .01ms !important;
     }
 }
-
