@@ -4,35 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre | Assis Leite</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <meta name="description" content="Conheça Assis Leite, desenvolvedor Web.">
+    <title>Sobre mim | Assis Leite</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-<header class="header">
-    <!-- Copie aqui o menu de navegação -->
-</header>
+<div id="site-header"></div>
 
-<main class="container section">
+<main class="container page-content">
+
     <div class="section-heading reveal">
-        <span class="section-label">QUEM SOU</span>
-        <h2>Sobre <span class="blue">mim</span></h2>
+        <span class="section-label">MINHA HISTÓRIA</span>
+        <h1 class="page-title">Sobre <span class="blue">mim</span></h1>
+        <p>Conheça um pouco mais sobre quem sou.</p>
     </div>
 
-    <div class="about-content reveal">
-        <p>
-            Meu nome é Assis Leite e sou desenvolvedor.
-            Tenho interesse em tecnologia, programação,
-            desenvolvimento web e criação de projetos digitais.
-        </p>
+    <div class="about-layout reveal">
 
-        <p>
-            Estou sempre buscando aprender, evoluir e
-            transformar ideias em soluções funcionais.
-        </p>
+        <div class="about-photo">
+            <img src="assets/perfil.jpg"
+                 alt="Assis Leite"
+                 onerror="this.style.display='none';this.parentElement.classList.add('no-photo')">
+            <span class="about-placeholder">AL</span>
+        </div>
+
+        <div class="about-text">
+
+            <h2>Olá! Eu sou <span class="blue">Assis Leite</span>.</h2>
+
+            <p>
+                Sou desenvolvedor e apaixonado por tecnologia,
+                programação e desenvolvimento de soluções digitais.
+            </p>
+
+            <p>
+                Gosto de explorar novas ferramentas, aprender
+                tecnologias e transformar ideias em projetos reais.
+            </p>
+
+            <p>
+                Estou construindo minha trajetória na área de
+                desenvolvimento web, sempre buscando evoluir,
+                adquirir experiência e criar soluções cada vez melhores.
+            </p>
+
+            <p>
+                Este portfólio é um espaço para apresentar meu trabalho,
+                meus conhecimentos e os projetos que desenvolvo.
+            </p>
+
+            <a href="projetos.html" class="btn btn-primary">
+                Conhecer meus projetos →
+            </a>
+
+        </div>
+
     </div>
+
+    <section class="section">
+        <div class="section-heading reveal">
+            <span class="section-label">MEUS OBJETIVOS</span>
+            <h2>Aprender, criar e <span class="blue">evoluir</span></h2>
+        </div>
+
+        <div class="cards-grid">
+
+            <div class="info-card reveal">
+                <span class="card-icon">📚</span>
+                <h3>Aprendizado</h3>
+                <p>Buscar conhecimento e desenvolver novas habilidades.</p>
+            </div>
+
+            <div class="info-card reveal">
+                <span class="card-icon">💡</span>
+                <h3>Criatividade</h3>
+                <p>Transformar ideias em experiências digitais.</p>
+            </div>
+
+            <div class="info-card reveal">
+                <span class="card-icon">🎯</span>
+                <h3>Resultados</h3>
+                <p>Desenvolver projetos funcionais e profissionais.</p>
+            </div>
+
+        </div>
+    </section>
+
 </main>
+
+<div id="site-footer"></div>
 
 </body>
 </html>
