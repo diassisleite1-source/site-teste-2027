@@ -15,6 +15,8 @@ const pages = [
     { name: "Projetos", url: "projetos.html" },
     { name: "Serviços", url: "servicos.html" },
     { name: "Contato", url: "contato.html" }
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 ];
 
 const currentPage =
