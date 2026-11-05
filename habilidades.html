@@ -4,81 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Habilidades e tecnologias de Assis Leite.">
-    <title>Habilidades | Assis Leite</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Habilidades | Neon Gaming</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+<header>
+    <a href="index.html" class="logo">NEON<span>GAMING</span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="projetos.html">Projetos</a>
+        <a class="active" href="habilidades.html">Habilidades</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
 
-<div id="site-header"></div>
-
-<main class="container page-content">
-
-    <div class="section-heading reveal">
-        <span class="section-label">CONHECIMENTOS</span>
-        <h1 class="page-title">Minhas <span class="blue">habilidades</span></h1>
-        <p>Conheça as tecnologias e ferramentas com as quais trabalho e estudo.</p>
-    </div>
-
-    <div class="skills-grid">
-
-        <article class="skill-card reveal">
-            <span class="skill-icon">🌐</span>
-            <h3>HTML5</h3>
-            <p>Estruturação e organização de páginas web.</p>
-            <span class="skill-level">Desenvolvimento Web</span>
-        </article>
-
-        <article class="skill-card reveal">
-            <span class="skill-icon">🎨</span>
-            <h3>CSS3</h3>
-            <p>Estilização, layouts, animações e responsividade.</p>
-            <span class="skill-level">Design Web</span>
-        </article>
-
-        <article class="skill-card reveal">
-            <span class="skill-icon">⚡</span>
-            <h3>JavaScript</h3>
-            <p>Interatividade e funcionalidades para sites.</p>
-            <span class="skill-level">Programação</span>
-        </article>
-
-        <article class="skill-card reveal">
-            <span class="skill-icon">🐙</span>
-            <h3>GitHub</h3>
-            <p>Organização de projetos e versionamento de código.</p>
-            <span class="skill-level">Ferramentas</span>
-        </article>
-
-        <article class="skill-card reveal">
-            <span class="skill-icon">📱</span>
-            <h3>Responsividade</h3>
-            <p>Criação de interfaces para celulares e computadores.</p>
-            <span class="skill-level">Desenvolvimento Web</span>
-        </article>
-
-        <article class="skill-card reveal">
-            <span class="skill-icon">💻</span>
-            <h3>Desenvolvimento Web</h3>
-            <p>Construção de páginas e experiências digitais.</p>
-            <span class="skill-level">Tecnologia</span>
-        </article>
-
-    </div>
-
-    <section class="contact-box reveal">
-        <h2>Vamos colocar essas habilidades em <span class="blue">prática?</span></h2>
-        <p>Conheça alguns dos meus projetos.</p>
-        <a href="projetos.html" class="btn btn-primary">
-            Ver projetos →
-        </a>
+<main>
+    <section class="page-banner">
+        <h1>MINHAS HABILIDADES</h1>
+        <p>Conhecimentos e tecnologias.</p>
     </section>
 
+    <section class="section">
+        <div class="skills">
+            <div class="reveal">
+                <div class="skill-name"><span>HTML</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+            </div>
+
+            <div class="reveal">
+                <div class="skill-name"><span>CSS</span><span>75%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+            </div>
+
+            <div class="reveal">
+                <div class="skill-name"><span>JavaScript</span><span>50%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width:50%"></div></div>
+            </div>
+
+            <div class="reveal">
+                <div class="skill-name"><span>Design</span><span>65%</span></div>
+                <div class="skill-bar"><div class="skill-progress" style="width:65%"></div></div>
+            </div>
+        </div>
+    </section>
 </main>
 
-<div id="site-footer"></div>
-
+<footer>© <span id="year"></span> NEON GAMING — Todos os direitos reservados.</footer>
 </body>
 </html>
-
