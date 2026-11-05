@@ -1,10 +1,10 @@
 
-/* =====================================
-   ASSIS LEITE - JAVASCRIPT
-   ===================================== */
+// ========================================
+// ASSIS LEITE - JAVASCRIPT
+// ========================================
 
 
-// CABEÇALHO AUTOMÁTICO
+// 1. MENU DE NAVEGAÇÃO
 
 const headerContainer = document.getElementById("site-header");
 
@@ -17,9 +17,11 @@ const pages = [
     { name: "Contato", url: "contato.html" }
 ];
 
-const currentPage = location.pathname.split("/").pop() || "index.html";
+const currentPage =
+    location.pathname.split("/").pop() || "index.html";
 
 if (headerContainer) {
+
     headerContainer.innerHTML = `
         <header class="header">
             <nav class="navbar container">
@@ -30,6 +32,7 @@ if (headerContainer) {
                 </a>
 
                 <ul class="nav-links" id="navLinks">
+
                     ${pages.map(page => `
                         <li>
                             <a href="${page.url}"
@@ -38,6 +41,7 @@ if (headerContainer) {
                             </a>
                         </li>
                     `).join("")}
+
                 </ul>
 
                 <div class="nav-actions">
@@ -60,16 +64,19 @@ if (headerContainer) {
             </nav>
         </header>
     `;
+
 }
 
 
-// RODAPÉ AUTOMÁTICO
+// 2. RODAPÉ AUTOMÁTICO
 
 const footerContainer = document.getElementById("site-footer");
 
 if (footerContainer) {
+
     footerContainer.innerHTML = `
         <footer class="footer">
+
             <div class="container footer-content">
 
                 <p>
@@ -77,15 +84,19 @@ if (footerContainer) {
                     Assis Leite. Todos os direitos reservados.
                 </p>
 
-                <a href="index.html">Voltar ao início ↑</a>
+                <a href="index.html">
+                    Voltar ao início ↑
+                </a>
 
             </div>
+
         </footer>
     `;
+
 }
 
 
-// MENU PARA CELULAR
+// 3. MENU PARA CELULAR
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
@@ -98,7 +109,10 @@ if (menuToggle && navLinks) {
 
         menuToggle.textContent = isOpen ? "✕" : "☰";
 
-        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+        );
 
     });
 
@@ -110,7 +124,10 @@ if (menuToggle && navLinks) {
 
             menuToggle.textContent = "☰";
 
-            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
         });
 
@@ -119,15 +136,21 @@ if (menuToggle && navLinks) {
 }
 
 
-// MODO ESCURO E CLARO
+// 4. MODO ESCURO E CLARO
 
 const themeToggle = document.getElementById("themeToggle");
 
 const savedTheme = localStorage.getItem("assis-theme");
 
 if (savedTheme === "light") {
-    document.documentElement.setAttribute("data-theme", "light");
+
+    document.documentElement.setAttribute(
+        "data-theme",
+        "light"
+    );
+
 }
+
 
 function updateThemeIcon() {
 
@@ -135,13 +158,17 @@ function updateThemeIcon() {
         document.documentElement.getAttribute("data-theme");
 
     if (themeToggle) {
+
         themeToggle.textContent =
             currentTheme === "light" ? "☀" : "☾";
+
     }
 
 }
 
+
 updateThemeIcon();
+
 
 if (themeToggle) {
 
@@ -159,7 +186,10 @@ if (themeToggle) {
 
         } else {
 
-            document.documentElement.setAttribute("data-theme", "light");
+            document.documentElement.setAttribute(
+                "data-theme",
+                "light"
+            );
 
         }
 
@@ -172,7 +202,7 @@ if (themeToggle) {
 }
 
 
-// ANIMAÇÕES AO ROLAR A PÁGINA
+// 5. ANIMAÇÕES AO ROLAR A PÁGINA
 
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -197,14 +227,22 @@ if ("IntersectionObserver" in window) {
     });
 
     revealElements.forEach(element => {
+
         observer.observe(element);
+
     });
 
 } else {
 
     revealElements.forEach(element => {
+
         element.classList.add("active");
+
     });
 
 }
 
+
+// 6. ANO AUTOMÁTICO DO RODAPÉ
+
+console.log("Portfólio Assis Leite carregado com sucesso!");
