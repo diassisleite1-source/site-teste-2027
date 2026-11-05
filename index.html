@@ -4,124 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Assis Leite - Desenvolvedor Web. Conheça meu portfólio, habilidades e projetos.">
-    <meta name="theme-color" content="#080d18">
-    <title>Assis Leite | Desenvolvedor Web</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <meta name="description" content="Portfólio digital com identidade Neon Cyberpunk Gaming.">
+    <title>Início | Neon Cyberpunk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
-    <div id="site-header"></div>
+<header>
+    <a href="index.html" class="logo">NEON<span>GAMING</span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav>
+        <a class="active" href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
 
-    <main>
-        <section class="hero container">
-
-            <div class="hero-content reveal">
-
-                <span class="tag">● Desenvolvedor Web</span>
-
-                <p class="intro">Olá, seja bem-vindo!</p>
-
-                <h1>Assis <span class="blue">Leite.</span></h1>
-
-                <h2>Desenvolvedor <span class="gradient">Web</span></h2>
-
-                <p class="hero-description">
-                    Sou Assis Leite, desenvolvedor apaixonado por
-                    tecnologia, programação e criação de soluções digitais.
-
-                    Transformo ideias em experiências modernas,
-                    funcionais e profissionais.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="projetos.html" class="btn btn-primary">
-                        Conhecer projetos →
-                    </a>
-
-                    <a href="contato.html" class="btn btn-outline">
-                        Fale comigo
-                    </a>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://github.com/" target="_blank"
-                       rel="noopener noreferrer">GitHub ↗</a>
-
-                    <a href="https://linkedin.com/" target="_blank"
-                       rel="noopener noreferrer">LinkedIn ↗</a>
-                </div>
-
+<main>
+    <section class="hero">
+        <div class="hero-content reveal">
+            <span class="tag">BEM-VINDO AO MEU UNIVERSO DIGITAL</span>
+            <h1>ENTRE NO MEU <span class="neon">MUNDO CYBERPUNK</span></h1>
+            <p>
+                Tecnologia, criatividade e inovação em um ambiente
+                inspirado no universo futurista dos games.
+                Conheça meu trabalho e meus projetos.
+            </p>
+            <div class="buttons">
+                <a href="projetos.html" class="btn primary">VER PROJETOS</a>
+                <a href="contato.html" class="btn">FALE COMIGO</a>
             </div>
+        </div>
 
-            <div class="hero-image reveal">
+        <div class="hero-art reveal">
+            <span>🎮</span>
+        </div>
+    </section>
 
-                <div class="image-glow"></div>
+    <section class="section">
+        <div class="section-title reveal">
+            <h2>EXPLORE O SISTEMA</h2>
+            <p>Conheça cada área do meu universo digital.</p>
+        </div>
 
-                <div class="profile-card">
-                    <img src="assets/perfil.jpg"
-                         alt="Foto de Assis Leite"
-                         onerror="this.style.display='none';this.parentElement.classList.add('no-photo')">
+        <div class="grid">
+            <article class="card reveal">
+                <div class="card-icon">👨‍💻</div>
+                <h3>SOBRE MIM</h3>
+                <p>Conheça minha história, meus objetivos e minha trajetória.</p>
+                <a href="sobre.html" class="neon">Explorar →</a>
+            </article>
 
-                    <div class="profile-placeholder">AL</div>
-                </div>
+            <article class="card reveal">
+                <div class="card-icon">⚡</div>
+                <h3>SERVIÇOS</h3>
+                <p>Veja as soluções e os serviços que posso oferecer.</p>
+                <a href="servicos.html" class="neon">Explorar →</a>
+            </article>
 
-                <div class="floating-card">
-                    <span class="blue">✦</span>
-                    Tecnologia e Criatividade
-                </div>
+            <article class="card reveal">
+                <div class="card-icon">🚀</div>
+                <h3>PROJETOS</h3>
+                <p>Conheça os trabalhos e projetos que desenvolvi.</p>
+                <a href="projetos.html" class="neon">Explorar →</a>
+            </article>
+        </div>
+    </section>
+</main>
 
-            </div>
-
-        </section>
-
-        <section class="section container">
-
-            <div class="section-heading reveal">
-                <span class="section-label">CONHEÇA MEU TRABALHO</span>
-                <h2>O que você encontra <span class="blue">aqui</span></h2>
-            </div>
-
-            <div class="cards-grid">
-
-                <a href="sobre.html" class="info-card reveal">
-                    <span class="card-icon">👨‍💻</span>
-                    <h3>Sobre mim</h3>
-                    <p>Conheça minha história e minha trajetória.</p>
-                    <span class="card-arrow">Saiba mais →</span>
-                </a>
-
-                <a href="habilidades.html" class="info-card reveal">
-                    <span class="card-icon">⚡</span>
-                    <h3>Habilidades</h3>
-                    <p>Conheça minhas tecnologias e conhecimentos.</p>
-                    <span class="card-arrow">Saiba mais →</span>
-                </a>
-
-                <a href="projetos.html" class="info-card reveal">
-                    <span class="card-icon">🚀</span>
-                    <h3>Projetos</h3>
-                    <p>Veja meus trabalhos e experiências.</p>
-                    <span class="card-arrow">Saiba mais →</span>
-                </a>
-
-            </div>
-
-        </section>
-
-        <section class="contact-box container reveal">
-            <span class="section-label">VAMOS CONVERSAR?</span>
-            <h2>Vamos criar algo <span class="blue">incrível?</span></h2>
-            <p>Entre em contato e vamos conversar sobre seu projeto.</p>
-            <a href="contato.html" class="btn btn-primary">
-                Entrar em contato →
-            </a>
-        </section>
-
-    </main>
-
-    <div id="site-footer"></div>
+<footer>
+    © <span id="year"></span> NEON GAMING — Todos os direitos reservados.
+</footer>
 
 </body>
 </html>
