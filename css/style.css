@@ -390,3 +390,41 @@ footer span {
         padding-right: 6%;
     }
 }
+
+/* CORREÇÃO: GARANTIR QUE O CONTEÚDO APAREÇA */
+
+.reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+.reveal.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+/* Melhorar a apresentação da página SOBRE */
+
+.section .grid {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.section .card {
+    min-height: 230px;
+    padding: 30px;
+}
+
+.section .card p {
+    color: #aab4ce;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.section .card h3 {
+    color: #00eaff;
+    margin-bottom: 15px;
+}
