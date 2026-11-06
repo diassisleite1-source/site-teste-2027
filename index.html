@@ -4,16 +4,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio digital com identidade Neon Cyberpunk Gaming.">
+
+    <meta name="description" content="Meu portfólio Neon Cyberpunk Gaming. Tecnologia, criatividade e projetos digitais.">
+
     <title>Início | Neon Cyberpunk</title>
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+
+    <style>
+        /* Conteúdo principal da página inicial */
+
+        .home-hero {
+            min-height: 82vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            padding: 75px 8%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home-hero::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: #00eaff;
+            filter: blur(180px);
+            opacity: .12;
+            top: 20%;
+            left: 5%;
+            pointer-events: none;
+        }
+
+        .home-content {
+            max-width: 680px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .home-label {
+            color: #ff00c8;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 13px;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+
+        .home-content h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(35px, 5vw, 65px);
+            line-height: 1.2;
+            margin: 25px 0;
+            color: #fff;
+        }
+
+        .home-content h1 span {
+            color: #00eaff;
+            text-shadow: 0 0 15px #00eaff;
+        }
+
+        .home-content p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #aab4ce;
+        }
+
+        .home-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 35px;
+        }
+
+        .home-buttons a {
+            padding: 14px 25px;
+            border: 1px solid #00eaff;
+            border-radius: 6px;
+            color: #00eaff;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .home-buttons a:first-child {
+            background: #00eaff;
+            color: #070914;
+            box-shadow: 0 0 20px #00eaff88;
+        }
+
+        .home-buttons a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px #00eaff;
+        }
+
+        .cyber-art {
+            width: 340px;
+            height: 340px;
+            min-width: 280px;
+            border: 2px solid #00eaff;
+            border-radius: 30px;
+            background:
+                radial-gradient(circle, #25004d, #101629 70%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow:
+                0 0 20px #00eaff88,
+                inset 0 0 30px #9d00ff55;
+            animation: floating 4s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cyber-art span {
+            font-size: 125px;
+            filter: drop-shadow(0 0 20px #00eaff);
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .home-services {
+            padding: 75px 8%;
+            background: #0b1020;
+        }
+
+        .home-services h2 {
+            text-align: center;
+            color: #00eaff;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 15px;
+        }
+
+        .home-subtitle {
+            text-align: center;
+            color: #aab4ce;
+            margin-bottom: 40px;
+        }
+
+        .home-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .home-card {
+            padding: 30px;
+            background: #101629;
+            border: 1px solid #00eaff55;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .home-card:hover {
+            transform: translateY(-8px);
+            border-color: #ff00c8;
+            box-shadow: 0 0 22px #9d00ff55;
+        }
+
+        .home-card .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .home-card h3 {
+            color: #00eaff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .home-card p {
+            color: #aab4ce;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .home-card a {
+            color: #ff00c8;
+            font-weight: bold;
+        }
+
+        .home-contact {
+            text-align: center;
+            padding: 75px 8%;
+        }
+
+        .home-contact h2 {
+            color: #00eaff;
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .home-contact p {
+            color: #aab4ce;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 850px) {
+            .home-hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .home-buttons {
+                justify-content: center;
+            }
+
+            .cyber-art {
+                width: 260px;
+                height: 260px;
+                min-width: 260px;
+            }
+
+            .cyber-art span {
+                font-size: 90px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
 <header>
     <a href="index.html" class="logo">NEON<span>GAMING</span></a>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <button class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false">☰</button>
+
     <nav>
         <a class="active" href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
@@ -25,59 +248,115 @@
 </header>
 
 <main>
-    <section class="hero">
-        <div class="hero-content reveal">
-            <span class="tag">BEM-VINDO AO MEU UNIVERSO DIGITAL</span>
-            <h1>ENTRE NO MEU <span class="neon">MUNDO CYBERPUNK</span></h1>
+
+    <!-- APRESENTAÇÃO PRINCIPAL -->
+    <section class="home-hero">
+
+        <div class="home-content">
+
+            <span class="home-label">
+                BEM-VINDO AO MEU UNIVERSO DIGITAL
+            </span>
+
+            <h1>
+                O FUTURO É <span>AGORA.</span><br>
+                ENTRE NO MUNDO CYBERPUNK!
+            </h1>
+
             <p>
-                Tecnologia, criatividade e inovação em um ambiente
-                inspirado no universo futurista dos games.
-                Conheça meu trabalho e meus projetos.
+                Tecnologia, criatividade e inovação em um só lugar.
+                Explore meu universo digital, conheça meus projetos
+                e descubra novas possibilidades no mundo da tecnologia.
             </p>
-            <div class="buttons">
-                <a href="projetos.html" class="btn primary">VER PROJETOS</a>
-                <a href="contato.html" class="btn">FALE COMIGO</a>
+
+            <div class="home-buttons">
+                <a href="projetos.html">🚀 VER PROJETOS</a>
+                <a href="contato.html">✉ ENTRAR EM CONTATO</a>
             </div>
+
         </div>
 
-        <div class="hero-art reveal">
+        <div class="cyber-art">
             <span>🎮</span>
         </div>
+
     </section>
 
-    <section class="section">
-        <div class="section-title reveal">
-            <h2>EXPLORE O SISTEMA</h2>
-            <p>Conheça cada área do meu universo digital.</p>
-        </div>
+    <!-- ÁREAS DO SITE -->
+    <section class="home-services">
 
-        <div class="grid">
-            <article class="card reveal">
-                <div class="card-icon">👨‍💻</div>
+        <h2>EXPLORE MEU UNIVERSO</h2>
+
+        <p class="home-subtitle">
+            Conheça as principais áreas do meu portfólio.
+        </p>
+
+        <div class="home-grid">
+
+            <article class="home-card">
+                <div class="icon">👨‍💻</div>
                 <h3>SOBRE MIM</h3>
-                <p>Conheça minha história, meus objetivos e minha trajetória.</p>
-                <a href="sobre.html" class="neon">Explorar →</a>
+                <p>
+                    Conheça minha história, meus objetivos
+                    e minha paixão pela tecnologia.
+                </p>
+                <a href="sobre.html">SAIBA MAIS →</a>
             </article>
 
-            <article class="card reveal">
-                <div class="card-icon">⚡</div>
+            <article class="home-card">
+                <div class="icon">⚡</div>
                 <h3>SERVIÇOS</h3>
-                <p>Veja as soluções e os serviços que posso oferecer.</p>
-                <a href="servicos.html" class="neon">Explorar →</a>
+                <p>
+                    Descubra as soluções digitais e os
+                    serviços que posso oferecer.
+                </p>
+                <a href="servicos.html">SAIBA MAIS →</a>
             </article>
 
-            <article class="card reveal">
-                <div class="card-icon">🚀</div>
+            <article class="home-card">
+                <div class="icon">🚀</div>
                 <h3>PROJETOS</h3>
-                <p>Conheça os trabalhos e projetos que desenvolvi.</p>
-                <a href="projetos.html" class="neon">Explorar →</a>
+                <p>
+                    Veja minhas criações e trabalhos
+                    desenvolvidos no universo digital.
+                </p>
+                <a href="projetos.html">SAIBA MAIS →</a>
             </article>
+
+            <article class="home-card">
+                <div class="icon">💡</div>
+                <h3>HABILIDADES</h3>
+                <p>
+                    Conheça minhas habilidades,
+                    conhecimentos e tecnologias.
+                </p>
+                <a href="habilidades.html">SAIBA MAIS →</a>
+            </article>
+
         </div>
+
     </section>
+
+    <!-- CONTATO -->
+    <section class="home-contact">
+
+        <h2>VAMOS CRIAR ALGO INCRÍVEL?</h2>
+
+        <p>
+            Tem uma ideia ou projeto? Entre em contato comigo!
+        </p>
+
+        <a href="contato.html" class="btn primary">
+            FALAR COMIGO
+        </a>
+
+    </section>
+
 </main>
 
 <footer>
-    © <span id="year"></span> NEON GAMING — Todos os direitos reservados.
+    © <span id="year"></span>
+    NEON GAMING — Todos os direitos reservados.
 </footer>
 
 </body>
