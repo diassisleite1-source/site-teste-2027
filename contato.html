@@ -98,10 +98,40 @@
 
 </main>
 
-<footer>
-    © <span id="year"></span> NEON GAMING —
-    Todos os direitos reservados.
-</footer>
+
+<form class="contact-form reveal"
+      id="contactForm"
+      action="https://formsubmit.co/SEUEMAIL@gmail.com"
+      method="POST">
+
+    <input type="text"
+           name="nome"
+           placeholder="Seu nome"
+           required>
+
+    <input type="email"
+           name="email"
+           placeholder="Seu e-mail"
+           required>
+
+    <textarea name="mensagem"
+              placeholder="Escreva sua mensagem..."
+              required></textarea>
+
+    <input type="hidden"
+           name="_subject"
+           value="Novo contato - Neon Gaming">
+
+    <input type="hidden"
+           name="_template"
+           value="table">
+
+    <button type="submit" class="btn primary">
+        ENVIAR MENSAGEM
+    </button>
+
+</form>
+
 
 </body>
 </html>
