@@ -14,15 +14,11 @@
 <body>
 
 <header>
-    <a href="index.html" class="logo">
-        NEON<span>GAMING</span>
-    </a>
+    <a href="index.html" class="logo">NEON<span>GAMING</span></a>
 
     <button class="menu-toggle"
             aria-label="Abrir menu"
-            aria-expanded="false">
-        ☰
-    </button>
+            aria-expanded="false">☰</button>
 
     <nav>
         <a href="index.html">Início</a>
@@ -44,12 +40,17 @@
     <section class="section">
 
         <form class="contact-form reveal"
-              action="diassisleite1@gmail.com"
+              id="contactForm"
+
+              <!-- COLOQUE SEU LINK DE ENVIO AQUI -->
+              action="https://formsubmit.co/SEUEMAIL@gmail.com"
+
               method="POST">
 
             <input
                 type="text"
                 name="nome"
+                id="nome"
                 placeholder="Seu nome"
                 required
             >
@@ -57,36 +58,27 @@
             <input
                 type="email"
                 name="email"
+                id="email"
                 placeholder="Seu e-mail"
                 required
             >
 
             <textarea
                 name="mensagem"
+                id="mensagem"
                 placeholder="Escreva sua mensagem..."
                 required
             ></textarea>
 
-            <!-- Assunto do e-mail -->
-            <input
-                type="hidden"
-                name="_subject"
-                value="Nova mensagem recebida - Neon Gaming"
-            >
+            <!-- ASSUNTO DO E-MAIL -->
+            <input type="hidden"
+                   name="_subject"
+                   value="Novo contato - Neon Gaming">
 
-            <!-- Formato do e-mail -->
-            <input
-                type="hidden"
-                name="_template"
-                value="table"
-            >
-
-            <!-- Proteção contra spam -->
-            <input
-                type="hidden"
-                name="_captcha"
-                value="true"
-            >
+            <!-- REDIRECIONAMENTO APÓS O ENVIO -->
+            <input type="hidden"
+                   name="_next"
+                   value="diassisleite1@gmail.com">
 
             <button type="submit" class="btn primary">
                 ENVIAR MENSAGEM
@@ -98,40 +90,10 @@
 
 </main>
 
-
-<form class="contact-form reveal"
-      id="contactForm"
-      action="https://formsubmit.co/SEUEMAIL@gmail.com"
-      method="POST">
-
-    <input type="text"
-           name="nome"
-           placeholder="Seu nome"
-           required>
-
-    <input type="email"
-           name="email"
-           placeholder="Seu e-mail"
-           required>
-
-    <textarea name="mensagem"
-              placeholder="Escreva sua mensagem..."
-              required></textarea>
-
-    <input type="hidden"
-           name="_subject"
-           value="Novo contato - Neon Gaming">
-
-    <input type="hidden"
-           name="_template"
-           value="table">
-
-    <button type="submit" class="btn primary">
-        ENVIAR MENSAGEM
-    </button>
-
-</form>
-
+<footer>
+    © <span id="year"></span> NEON GAMING —
+    Todos os direitos reservados.
+</footer>
 
 </body>
 </html>
