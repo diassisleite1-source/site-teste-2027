@@ -1,43 +1,31 @@
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato | Neon Gaming</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
-</head>
-<body>
-<header>
-    <a href="index.html" class="logo">NEON<span>GAMING</span></a>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="habilidades.html">Habilidades</a>
-        <a class="active" href="contato.html">Contato</a>
-    </nav>
-</header>
+// ENVIO DO FORMULÁRIO DE CONTATO PARA O WHATSAPP
+const contactForm = document.getElementById("contactForm");
 
-<main>
-    <section class="page-banner">
-        <h1>ENTRE EM CONTATO</h1>
-        <p>Vamos conversar sobre novas ideias e projetos.</p>
-    </section>
+if (contactForm) {
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-    <section class="section">
-        <form class="contact-form reveal" id="contactForm">
-            <input type="text" id="nome" placeholder="Seu nome" required>
-            <input type="email" id="email" placeholder="Seu e-mail" required>
-            <textarea id="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
-            <button type="submit" class="btn primary">ENVIAR MENSAGEM</button>
-        </form>
-    </section>
-</main>
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
 
-<footer>© <span id="year"></span> NEON GAMING — Todos os direitos reservados.</footer>
-</body>
-</html>
+        // COLOQUE SEU NÚMERO AQUI
+        const telefone = "5584999999999";
+
+        const texto = 
+`Olá! Recebi uma mensagem pelo site NEON GAMING.
+
+Nome: ${nome}
+E-mail: ${email}
+
+Mensagem:
+${mensagem}`;
+
+        const link = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+
+        window.open(link, "_blank");
+
+        contactForm.reset();
+    });
+}
