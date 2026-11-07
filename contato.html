@@ -1,31 +1,33 @@
 
-// ENVIO DO FORMULÁRIO DE CONTATO PARA O WHATSAPP
-const contactForm = document.getElementById("contactForm");
+<form class="contact-form reveal"
+      action="https://formsubmit.co/SEUEMAIL@gmail.com"
+      method="POST">
 
-if (contactForm) {
-    contactForm.addEventListener("submit", function(event) {
-        event.preventDefault();
+    <input type="text"
+           name="nome"
+           placeholder="Seu nome"
+           required>
 
-        const nome = document.getElementById("nome").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const mensagem = document.getElementById("mensagem").value.trim();
+    <input type="email"
+           name="email"
+           placeholder="Seu e-mail"
+           required>
 
-        // COLOQUE SEU NÚMERO AQUI
-        const telefone = "5584999999999";
+    <textarea name="mensagem"
+              placeholder="Escreva sua mensagem..."
+              required></textarea>
 
-        const texto = 
-`Olá! Recebi uma mensagem pelo site NEON GAMING.
+    <input type="hidden" name="_subject"
+           value="Nova mensagem pelo site Neon Gaming">
 
-Nome: ${nome}
-E-mail: ${email}
+    <input type="hidden" name="_template"
+           value="table">
 
-Mensagem:
-${mensagem}`;
+    <input type="hidden" name="_captcha"
+           value="true">
 
-        const link = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+    <button type="submit" class="btn primary">
+        ENVIAR MENSAGEM
+    </button>
 
-        window.open(link, "_blank");
-
-        contactForm.reset();
-    });
-}
+</form>
