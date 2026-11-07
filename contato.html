@@ -1,33 +1,107 @@
 
-<form class="contact-form reveal"
-      action="https://formsubmit.co/SEUEMAIL@gmail.com"
-      method="POST">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <input type="text"
-           name="nome"
-           placeholder="Seu nome"
-           required>
+    <title>Contato | Neon Gaming</title>
 
-    <input type="email"
-           name="email"
-           placeholder="Seu e-mail"
-           required>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
 
-    <textarea name="mensagem"
-              placeholder="Escreva sua mensagem..."
-              required></textarea>
+<body>
 
-    <input type="hidden" name="_subject"
-           value="Nova mensagem pelo site Neon Gaming">
+<header>
+    <a href="index.html" class="logo">
+        NEON<span>GAMING</span>
+    </a>
 
-    <input type="hidden" name="_template"
-           value="table">
-
-    <input type="hidden" name="_captcha"
-           value="true">
-
-    <button type="submit" class="btn primary">
-        ENVIAR MENSAGEM
+    <button class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false">
+        ☰
     </button>
 
-</form>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a class="active" href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-banner">
+        <h1>ENTRE EM CONTATO</h1>
+        <p>Vamos conversar sobre novas ideias e projetos.</p>
+    </section>
+
+    <section class="section">
+
+        <form class="contact-form reveal"
+              action="https://formsubmit.co/SEUEMAIL@gmail.com"
+              method="POST">
+
+            <input
+                type="text"
+                name="nome"
+                placeholder="Seu nome"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Seu e-mail"
+                required
+            >
+
+            <textarea
+                name="mensagem"
+                placeholder="Escreva sua mensagem..."
+                required
+            ></textarea>
+
+            <!-- Assunto do e-mail -->
+            <input
+                type="hidden"
+                name="_subject"
+                value="Nova mensagem recebida - Neon Gaming"
+            >
+
+            <!-- Formato do e-mail -->
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+            <!-- Proteção contra spam -->
+            <input
+                type="hidden"
+                name="_captcha"
+                value="true"
+            >
+
+            <button type="submit" class="btn primary">
+                ENVIAR MENSAGEM
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    © <span id="year"></span> NEON GAMING —
+    Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
